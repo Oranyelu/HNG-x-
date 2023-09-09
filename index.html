@@ -6,30 +6,35 @@
     <!--<link rel="stylesheet" href="style.css" />-->
     <title>Slack Profile</title>
     <style>
-     body {
-      height: 100vh;
-      margin: 0px;
-      border: 0px;
-      padding: 0px;
-      background-color: rgb(43, 43, 42);
-      color: antiquewhite;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      body {
+        height: 100vh;
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+        background-color: rgb(43, 43, 42);
+        color: antiquewhite;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
       }
 
-    img {
-      width: 140px;
-      border-radius: 20px;
-      margin: 15px;
+      img {
+        width: 250px;
+        border-radius: 20px;
+        margin: 15px;
       }
 
-    div {
-          margin: 15px;
-          font-size: 20px;
-        }
+      div {
+        margin: 15px;
+        font-size: 20px;
+      }
+
+      a {
+        color: bisque;
+      }
     </style>
   </head>
 
@@ -41,8 +46,14 @@
     />
     <div>
       <h1 data-testid="slackUserName">Chime Chiemerie George</h1>
-
+      <div id="output"></div>
       <script data-testid="currentDayOfTheWeek">
+        function displayMessage(message) {
+          var paragraph = document.createElement("p");
+          paragraph.textContent = message;
+          document.getElementById("output").appendChild(paragraph);
+        }
+
         const daysOfTheWeek = [
           "Sunday",
           "Monday",
@@ -56,21 +67,33 @@
         const dayIndex = currentDate.getDay();
         const currentDay = daysOfTheWeek[dayIndex];
         console.log("Today is:" + currentDay);
+        displayMessage(currentDay);
       </script>
 
       <script data-testid="currentUTCTime">
-        const currentTime = new Date();
-        const utcOffsetMunites = currentTime.getTimezoneOffset();
-        const utcOffsetHours = Math.abs(
-            Math.floor(utcOffsetMunites / 60)
-        );
-        const utcOffsetMunitesReminder = Math.abs(utcOffsetMunites % 60);
-        console.log("Nigeria standard time(UTC+" + utcOffsetHours + ":" + utcOffsetMunitesReminder +")");
+        //const currentTime = new Date();
+        // const utcOffsetMunites = currentTime.getTimezoneOffset();
+        // const utcOffsetHours = Math.abs(Math.floor(utcOffsetMunites / 60));
+        //const utcOffsetMunitesReminder = Math.abs(utcOffsetMunites % 60);
+        //console.log(
+        //"Nigeria standard time(UTC+" +
+        //utcOffsetHours +
+        //":" +
+        //utcOffsetMunitesReminder +
+        //")"
+        //);
+
+        const currentTime = Date.now();
+        console.log("Current UTC Time In MIlliseconds:" + currentTime);
+
+        displayMessage(currentTime);
       </script>
 
       <h3 data-testid="myTrack">Front-end Development</h3>
 
-      <a href="https://github.com/Oranyelu/HNG-x-" data-testid="githubURL"></a>
+      <a href="https://github.com/Oranyelu/HNG-x-" data-testid="githubURL">
+        GIT HUB REPO</a
+      >
     </div>
   </body>
 </html>
