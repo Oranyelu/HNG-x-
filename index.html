@@ -58,7 +58,15 @@
         console.log("Today is:" + currentDay);
       </script>
 
-      <script data-testid="currentUTCTime"></script>
+      <script data-testid="currentUTCTime">
+        const currentTime = new Date();
+        const utcOffsetMunites = currentTime.getTimezoneOffset();
+        const utcOffsetHours = Math.abs(
+            Math.floor(utcOffsetMunites / 60)
+        );
+        const utcOffsetMunitesReminder = Math.abs(utcOffsetMunites % 60);
+        console.log("Nigeria standard time(UTC+" + utcOffsetHours + ":" + utcOffsetMunitesReminder +")");
+      </script>
 
       <h3 data-testid="myTrack">Front-end Development</h3>
 
