@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<link rel="stylesheet" href="style.css" />-->
+    <title>Slack Profile</title>
+    <style>
+     body {
+      height: 100vh;
+      margin: 0px;
+      border: 0px;
+      padding: 0px;
+      background-color: rgb(43, 43, 42);
+      color: antiquewhite;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+    img {
+      width: 140px;
+      border-radius: 20px;
+      margin: 15px;
+      }
+
+    div {
+          margin: 15px;
+          font-size: 20px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <img
+      src="img/IMG_E2350.JPG"
+      alt="Chime Chiemerie George"
+      data-testid="slackDisplayImage"
+    />
+    <div>
+      <h1 data-testid="slackUserName">Chime Chiemerie George</h1>
+
+      <script data-testid="currentDayOfTheWeek">
+        const daysOfTheWeek = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        const currentDate = new Date();
+        const dayIndex = currentDate.getDay();
+        const currentDay = daysOfTheWeek[dayIndex];
+        console.log("Today is:" + currentDay);
+      </script>
+
+      <script data-testid="currentUTCTime"></script>
+
+      <h3 data-testid="myTrack">Front-end Development</h3>
+
+      <a href="" data-testid="githubURL"></a>
+    </div>
+  </body>
+</html>
