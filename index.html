@@ -3,39 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--<link rel="stylesheet" href="style.css" />-->
+    <link rel="stylesheet" href="style.css" />
     <title>Slack Profile</title>
-    <style>
-      body {
-        height: 100vh;
-        margin: 0px;
-        border: 0px;
-        padding: 0px;
-        background-color: rgb(43, 43, 42);
-        color: antiquewhite;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-      }
-
-      img {
-        width: 250px;
-        border-radius: 20px;
-        margin: 15px;
-      }
-
-      div {
-        margin: 15px;
-        font-size: 20px;
-      }
-
-      a {
-        color: bisque;
-      }
-    </style>
   </head>
 
   <body>
@@ -73,21 +42,8 @@
       </script>
 
       <script data-testid="currentUTCTime">
-        //const currentTime = new Date();
-        // const utcOffsetMunites = currentTime.getTimezoneOffset();
-        // const utcOffsetHours = Math.abs(Math.floor(utcOffsetMunites / 60));
-        //const utcOffsetMunitesReminder = Math.abs(utcOffsetMunites % 60);
-        //console.log(
-        //"Nigeria standard time(UTC+" +
-        //utcOffsetHours +
-        //":" +
-        //utcOffsetMunitesReminder +
-        //")"
-        //);
-
         const currentTime = Date.now();
         console.log("Current UTC Time In MIlliseconds:" + currentTime);
-
         displayMessage(currentTime);
       </script>
 
