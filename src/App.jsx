@@ -5,7 +5,6 @@ import { Products } from "./assets/Products.json";
 
 console.log(Products)
 function App() {
-  const { ring } = useParams();
   return (
     <>
       <Header />
