@@ -7,12 +7,13 @@ import Product from "./pages/Product.jsx";
 import Payment from "./pages/Payment.jsx";
 import Confirmation from "./pages/Confirmation.jsx";
 import Cart from "./pages/Cart.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <div>404 not found</div>
+    errorElement: <NotFoundPage />
   },
   {
     path: "/cart",
