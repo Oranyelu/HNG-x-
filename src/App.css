@@ -10,6 +10,14 @@ a{
   color: black;
 }
 
+p{
+  font-size: 16px;
+  margin: 0;
+}
+
+header .hambuger-menu{
+  display: none;
+}
 
 .header-discount{
 display: flex;
@@ -27,8 +35,9 @@ header main{
   align-items: center;
   justify-content: space-between;
   height: fit-content;
-  padding: 10px;
+  padding: 20px;
 }
+
 header div{
   width: fit-content;
   display: flex;
@@ -68,4 +77,156 @@ nav a{
 nav{
   display: flex;
   flex-wrap: wrap;
+}
+
+footer main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+footer main .inquiry{
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+footer main .inquiry span{
+  width: 174px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+footer main .inquiry .input{
+  min-width: 414px;
+  min-height: fit-content;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  padding: 0 25px 0 25px;
+  display: flex;
+  align-items: center;
+}
+
+footer main .inquiry input{
+  width: 85%;
+  height: 62px;
+  border-style: none;
+
+}
+
+footer main .inquiry b{
+  font-size: 24px;
+  line-height: 24px;
+}
+
+footer main .inquiry p{
+  margin-bottom: 0;
+  line-height: 16px; 
+}
+
+.Footer-links li{
+list-style: none;
+line-height: 35px;
+font-size: 16px;
+
+}
+footer img{
+  padding: 20px;
+}
+
+.Product-card{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+}
+
+.Product-card article{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Product-card main{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 270px;
+  height: 294px;
+}
+
+.Product-card .product-image{
+  width: 100%;
+  min-height: 100%;
+  background-color: aqua;
+}
+
+.like-and-add-to-cart{
+position: absolute;
+padding: 10px;
+}
+.color-holder{
+  display: flex;
+  gap: 5px;
+}
+.color{
+  display: flex;
+  width: 15px;
+  height: 15px;
+  background-color: brown;
+  border-radius: 50%;
+}
+.lable{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px ;
+}
+
+.product-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+section{
+  padding: 20px;
+}
+.container{
+  display: flex;
+}
+.container aside{
+  
+  min-width: 300px;
+}
+
+@media screen and (max-width: 600px) {
+
+header nav, .profile, .favourite{
+  display: none;
+}
+
+.filter{
+  display: none;
+}
+
+
+
+header hambuger-menu{
+ display: contents;
+}
+  footer main{
+    flex-direction: column-reverse;
+  }
+  footer main .inquiry{
+    align-items: center;
+  }
+  .Product-card main{
+    width: 156px;
+    height: 177px;
+  }
+  p{
+    font-size: 10px;
+  }
 }

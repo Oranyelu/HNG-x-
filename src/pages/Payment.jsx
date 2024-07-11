@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
 function Payment() {
   return (
-    <div>Payment</div>
-  )
+    <div>
+      <Header />
+      <Footer />
+    </div>
+  );
 }
 
-export default Payment
+export default Payment;

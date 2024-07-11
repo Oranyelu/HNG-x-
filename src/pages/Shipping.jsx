@@ -2,7 +2,10 @@ import React from 'react'
 
 function Shipping() {
   return (
-    <div>Shipping</div>
+    <div>
+      <Header />
+      <Footer />
+    </div>
   )
 }
 

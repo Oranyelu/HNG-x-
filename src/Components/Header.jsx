@@ -1,5 +1,5 @@
 import React from "react";
-import "../../public/GJ Logo.png";
+import gemLogo from "../assets/GJ Logo.png";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -15,12 +15,12 @@ function Header() {
       </div>
       <header>
         <main>
-          <img src="GJ Logo.png" />
+          <img src={gemLogo} />
           <div>
             <span className="search">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-               width="26.5px"
+                width="26.5px"
                 height="26.5px"
                 viewBox="0 0 24 24"
               >
@@ -32,10 +32,10 @@ function Header() {
               <input type="text" placeholder="Search" />
             </span>
 
-            <Link to="/">
+            <Link to="/" className="favourite">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-               width="26.5px"
+                width="26.5px"
                 height="26.5px"
                 viewBox="0 0 24 24"
               >
@@ -47,10 +47,10 @@ function Header() {
               </svg>
             </Link>
 
-            <Link to="/userProfile">
+            <Link to="/userProfile" className="profile">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-               width="26.5px"
+                width="26.5px"
                 height="26.5px"
                 viewBox="0 0 24 24"
               >
@@ -77,6 +77,21 @@ function Header() {
                 ></path>
               </svg>
             </Link>
+
+            <svg
+              className="hambuger-menu"
+              width="26.5"
+              height="26.5"
+              viewBox="0 0 17 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 1V0H17V1H0ZM17 5V6H0V5H17ZM0 10H17V11H0V10Z"
+                fill="black"
+                fill-opacity="0.7"
+              />
+            </svg>
           </div>
         </main>
         <hr />
