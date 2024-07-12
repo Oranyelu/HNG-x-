@@ -5,7 +5,6 @@ const Products={
   productData: [
     {
       "id": 1,
-      "img": ,
       "name": "Rose gold statement ring",
       "price": 300000,
       "color": "Rosegold",

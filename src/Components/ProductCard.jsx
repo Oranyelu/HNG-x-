@@ -1,7 +1,9 @@
 import React from "react";
-
+import {useCart} from "react-use-cart"
 
 function ProductCard(props) {
+
+  const { addItem } = useCart();
   return (
     <div className="Product-card">
       <main>
