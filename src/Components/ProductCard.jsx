@@ -1,6 +1,7 @@
 import React from "react";
 
-function ProductCard() {
+
+function ProductCard(props) {
   return (
     <div className="Product-card">
       <main>
@@ -25,16 +26,17 @@ function ProductCard() {
             />
           </svg>
         </span>
-     <span className="product-image"></span>
+       
+        <span className="product-image">{props.img}</span>
       </main>
       <article>
-        <p>Rose gold statement ring</p>
-        <p>N 300,000</p>
+        <p>{props.name}</p>
+        <p>{props.price}</p>
         <div className="color-holder">
           <span className="color"></span>
           <span className="color"></span>
         </div>
-        <p>Rosegold</p>
+        <p>{props.color}</p>
       </article>
     </div>
   );

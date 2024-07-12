@@ -1,5 +1,6 @@
 import React from "react";
 import gemLogo from "../assets/GJ Logo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -13,7 +14,7 @@ function Footer() {
               <li>About Us</li>
               <li>Terms and Conditions</li>
               <li>Shipping</li>
-              <li>Return Policy</li>
+              <Link to="/shipping">Return Policy</Link>
               <li>Become an Ambassador</li>
             </ul>
           </div>

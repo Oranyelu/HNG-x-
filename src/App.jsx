@@ -1,12 +1,10 @@
 import "./App.css";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import { Products } from "./assets/Products.json";
-import ProductCard from "./Components/ProductCard";
 import Filters from "./Components/Filters"
+import Home from "./Components/Home";
 
 
-console.log(Products);
 function App() {
   return (
     <>
@@ -21,21 +19,7 @@ function App() {
             <Filters />
           </aside>
           <main className="product-container">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+         <Home />
           </main>
         </div>
       </section>

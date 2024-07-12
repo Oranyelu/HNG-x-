@@ -22,7 +22,7 @@ header .hambuger-menu{
 .header-discount{
 display: flex;
 background-color: rgba(210, 180, 140, 0.3);
-text-align: center;
+align-items: center;
 justify-content: center;
 height: 48px;
 font-weight: 400;
@@ -228,5 +228,8 @@ header hambuger-menu{
   }
   p{
     font-size: 10px;
+  }
+  .header-discount p{
+    font-size: 16px;
   }
 }
