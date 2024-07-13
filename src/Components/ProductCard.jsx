@@ -29,7 +29,7 @@ function ProductCard(props) {
           </svg>
         </span>
        
-        <span className="product-image">{props.img}</span>
+        <span className="product-image">{props.thumbnail}</span>
       </main>
       <article>
         <p>{props.name}</p>
