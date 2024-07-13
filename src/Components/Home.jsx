@@ -1,34 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import ProductCard from "../Components/ProductCard";
-// import Products from "../assets/Products"
-import { useEffect } from 'react'
-import { useState } from 'react'
-
-
 
 function Home() {
-    const [records, setRecords] = useState([])
+    const [records, setRecords] = useState([]);
 
     useEffect(() => {
         fetch('https://dummyjson.com/products')
             .then(response => response.json())
-            .then(data => setRecords(data))
-        .catch( err => console.log(err))
-    }, [])
-  return (
-      <>
-          {records.productData.map((item, index) => {
-              return (
-                  <ProductCard img={item.img}
-                      name={item.name}
-                      color={item.color}
-                      price={item.price}
-                      ite={item}
-                      key={index} />
-               )
-           })}
-      </>
-  )
+            .then(data => setRecords(data.products)) // Access the products array within the data object
+            .catch(err => console.log(err));
+    }, []);
+
+    return (
+        <>
+            {records.map((item, index) => (
+                <ProductCard 
+                    img={item.thumbnail} // Adjusted according to actual property names from the API
+                    name={item.title} // Adjusted according to actual property names from the API
+                    color={item.color} // Adjust if necessary, API might not provide this
+                    price={item.price}
+                    item={item}
+                    key={index} 
+                />
+            ))}
+        </>
+    );
 }
 
-export default Home
+export default Home;
