@@ -7,7 +7,7 @@ function ProductCard(props) {
   return (
     <div className="Product-card">
       <main>
-        <span className="like-and-add-to-cart">
+        <span className="like-and-add-to-cart" onClick={() =>addItem(props.item)}>
           <svg
             width="53"
             height="24"

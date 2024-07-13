@@ -1,8 +1,9 @@
 import "./App.css";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import Filters from "./Components/Filters"
+import Filters from "./Components/Filters";
 import Home from "./Components/Home";
+import { CartProvider } from "react-use-cart";
 
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
             <Filters />
           </aside>
           <main className="product-container">
-         <Home />
+            <CartProvider>
+              <Home />
+            </CartProvider>
           </main>
         </div>
       </section>
